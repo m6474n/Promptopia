@@ -1,7 +1,10 @@
 import { Schema, model, models } from "mongoose";
 
 
-const propmtSchema = new Schema({
+const propmtSchema = new Schema({ creator: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+  },
     prompt : {
         type: String,
         required: [true, "Prompt is required!"]

@@ -3,11 +3,12 @@ import { connectDB } from "@/utils/database";
 import { NextResponse } from "next/server";
 
 export const POST = async (req) => {
-    const { prompt, tag } = await req.json(); // Corrected the typo here
+    const {userId, prompt, tag } = await req.json(); // Corrected the typo here
 
     try {
         await connectDB();
         const newPrompt = new Prompt({
+            // creator: userId,
             prompt, // Corrected the typo here
             tag
         });

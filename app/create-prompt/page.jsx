@@ -22,6 +22,7 @@ const CreatePrompt = () => {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
+                    
                     prompt: post.prompt,
                     tag: post.tag
                 })
